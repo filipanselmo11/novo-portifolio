@@ -3,4 +3,5 @@ export interface IInfoPortifolio {
     imagem: string,
     linkApp: string,
     descricao: string,
+    repositorio: string,
 }

@@ -7,11 +7,12 @@ import {
   Text,
   Divider,
   CardFooter,
-  Button
+  Button,
+  HStack
 } from "@chakra-ui/react";
 import { IInfoPortifolio } from "../../interfaces/IInfoPortifolio";
 
-const CardComponent = ({ nomeAplicacao, imagem, linkApp, descricao }: IInfoPortifolio) => {
+const CardComponent = ({ nomeAplicacao, imagem, linkApp, descricao, repositorio }: IInfoPortifolio) => {
   return (
     <Card maxW="sm" alignItems='center' textAlign='center' backgroundColor='orange'>
       <CardBody>
@@ -20,21 +21,28 @@ const CardComponent = ({ nomeAplicacao, imagem, linkApp, descricao }: IInfoPorti
           borderRadius='lg'
         />
         <Stack mt='6' spacing='3'>
-            <Heading size='md'>
-                {nomeAplicacao}
-            </Heading>
-            <Text>
-                {descricao}
-            </Text>
+          <Heading size='md'>
+            {nomeAplicacao}
+          </Heading>
+          <Text>
+            {descricao}
+          </Text>
         </Stack>
       </CardBody>
-      <Divider/>
+      <Divider />
       <CardFooter>
-            <Button variant='solid' colorScheme="blue">
-                <a href={linkApp} target='_blank'>
-                    Acessar
-                </a>
-            </Button>
+        <HStack spacing='24px'>
+          <Button variant='solid' colorScheme="blue">
+            <a href={linkApp} target='_blank'>
+              Acessar
+            </a>
+          </Button>
+          <Button variant='solid' colorScheme="blue">
+            <a href={repositorio} target='_blank'>
+              Repositório
+            </a>
+          </Button>
+        </HStack>
       </CardFooter>
     </Card>
   );
