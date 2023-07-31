@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <Heading variant="custom" textAlign='center'>
             <Text fontSize='4xl' as='kbd'>
-                Bem Vindo ao portifólio de Fílip Anselmo
+                Bem Vindo(a) !!
             </Text>
         </Heading>
     )

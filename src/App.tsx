@@ -2,6 +2,8 @@ import { SimpleGrid } from "@chakra-ui/react";
 import CardComponent from "./components/CardComponent";
 import FooterComponent from "./components/FooterComponent";
 import Header from "./components/Header";
+import Info from "./components/Info";
+import './App.css';
 
 function App() {
   const portiFolioInfo = [
@@ -15,14 +17,6 @@ function App() {
     },
     {
       id: 2,
-      nome: "Vuetify Dialog App",
-      imagem: "/prints/print-2.png",
-      linkApp: "https://vuetify-dialog-app.vercel.app",
-      descricao: "Projeto feito com Vue 2, de um componente que iria ser usado num projeto de trabalho",
-      repositorio: "https://github.com/filipanselmo11/vuetify-dialog-app"
-    },
-    {
-      id: 3,
       nome: "Vuetify Music App",
       imagem: "/prints/print-3.png",
       linkApp: "https://vuetify-music-app.vercel.app",
@@ -30,7 +24,7 @@ function App() {
       repositorio: "https://github.com/filipanselmo11/vuetify-music-app"
     },
     {
-      id: 4,
+      id: 3,
       nome: "Vuetify Theme App",
       imagem: "/prints/print-4.png",
       linkApp: "https://vuetify-theme-app.vercel.app",
@@ -38,7 +32,7 @@ function App() {
       repositorio: "https://github.com/filipanselmo11/vuetify-theme-app"
     },
     {
-      id: 5,
+      id: 4,
       nome: "Vue Galeria de Fotos SGC",
       imagem: "/prints/print-8.png",
       linkApp: "https://vue-galeria-fotos-sgc.vercel.app",
@@ -46,7 +40,7 @@ function App() {
       repositorio: "https://github.com/filipanselmo11/vue-galeria-fotos-sgc"
     },
     {
-      id: 6,
+      id: 5,
       nome: "Marvel DC App",
       imagem: "/prints/print-5.png",
       linkApp: "https://marvel-dc-app.vercel.app",
@@ -54,7 +48,7 @@ function App() {
       repositorio: "https://github.com/filipanselmo11/marvel-dc-app"
     },
     {
-      id: 7,
+      id: 6,
       nome: "Portifólio Antigo",
       imagem: "/prints/print-6.png",
       linkApp: "https://portifolio-wine-tau.vercel.app",
@@ -62,7 +56,7 @@ function App() {
       repositorio: "https://github.com/filipanselmo11/portifolio"
     },
     {
-      id: 8,
+      id: 7,
       nome: "Teste Vue Js Join",
       imagem: "/prints/print-7.png",
       linkApp: "https://teste-vuejs-join.vercel.app",
@@ -74,12 +68,14 @@ function App() {
   return (
     <>
       <section id="cabecalho">
+        <div className="cabecalho-div"></div>
         <Header />
       </section>
+      <br />
+      <section id="formulario">
+        <Info />
+      </section>
       <br/>
-      {/* <section id="formulario">
-        <h1>Componente do formulario</h1>
-      </section> */}
       <SimpleGrid columns={3} marginLeft='10'>
         {portiFolioInfo.map((portifolio) => (
           <div>
@@ -91,7 +87,7 @@ function App() {
               descricao={portifolio.descricao}
               repositorio="''"
             />
-            <br/>
+            <br />
           </div>
         ))}
       </SimpleGrid>
