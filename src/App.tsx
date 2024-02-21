@@ -63,6 +63,14 @@ function App() {
       descricao: "Projeto do processo seletivo para ingressar na JOIN, foi feito com Vue 2, Vuetify e uma biblioteca de mapas chamado Openlayers",
       repositorio: "https://github.com/filipanselmo11/teste-Vuejs-Join"
     },
+    {
+      id: 8,
+      nome: "Vi Store Angular",
+      imagem: "/prints/print-8.png",
+      linkApp: "https://vi-store-angular.vercel.app/",
+      descricao: "Lading page feito com Angular 17 e Material UI",
+      repositorio: "https://github.com/filipanselmo11/vi-store-angular"
+    },
   ];
 
   return (
